@@ -4,6 +4,10 @@ import Header from './components/Header';
 
 function App() {
   const [showStartPage , setShowStartPage] = useState(true);
+  const [currentPage, setCurrentPage] = useState('About');
+   const handleCurrentPage = (page) => {
+      setCurrentPage(page);
+   }
 
   return (
     <>
@@ -15,7 +19,7 @@ function App() {
       </main>
     ) : (
       <main>
-        <Header ></Header>
+        <Header currentPage={currentPage} handleCurrentPage={handleCurrentPage}></Header>
       </main>
     )}
   </>
