@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import StartPage from './components/StartPage';
 import Header from './components/Header';
+import Project from './components/Project';
 
 function App() {
   const [showStartPage , setShowStartPage] = useState(true);
@@ -20,6 +21,7 @@ function App() {
     ) : (
       <main>
         <Header currentPage={currentPage} handleCurrentPage={handleCurrentPage}></Header>
+        <Project currentPage={currentPage} handleCurrentPage={handleCurrentPage}></Project>
       </main>
     )}
   </>
