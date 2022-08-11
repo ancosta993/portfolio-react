@@ -58,5 +58,7 @@ body {
   background-image: url('../src/assets/hero-section-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
   height:20vh;
 }
