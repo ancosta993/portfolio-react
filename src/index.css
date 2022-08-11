@@ -62,3 +62,42 @@ body {
   background-attachment: fixed;
   height:20vh;
 }
+
+.nav-tabs {
+  display: flex;
+  color: #68efe7;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem 0 2rem;
+  font-size: 2rem;
+}
+
+
+.nav-links-group{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap:4rem;
+}
+
+.nav-link:hover{
+  border-bottom: solid 5px #68efe7;
+  border-radius:0.5rem;
+  padding:0 2px 0 2px;
+  cursor:pointer;
+}
+
+/* utility */
+.nav-link-active{
+  border-bottom: #68efe7;
+}
+
+/* reseting the elements */
+a{
+  text-decoration: none;
+  color:inherit;
+}
+li {
+  list-style-type: none;
+  margin:0;
+}
