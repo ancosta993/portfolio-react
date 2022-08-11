@@ -54,3 +54,9 @@ body {
   border: 10px solid black;
 }
 
+.heroContainer{
+  background-image: url('../src/assets/hero-section-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:20vh;
+}

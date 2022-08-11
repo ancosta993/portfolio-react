@@ -6,14 +6,20 @@ function App() {
   const [showStartPage , setShowStartPage] = useState(true);
 
   return (
-    <main className = {showStartPage && 'startPageBg'}>
+    <>
       {showStartPage ? (
+      <main className={showStartPage && 'startPageBg'}>
         <StartPage 
-        showStartPage={showStartPage}setShowStartPage={setShowStartPage}></StartPage>
-      ) : (
+        showStartPage={showStartPage} setShowStartPage={setShowStartPage}>
+        </StartPage>
+      </main>
+    ) : (
+      <main>
         <Header></Header>
-      )}
-    </main>
+      </main>
+    )}
+  </>
+    
     
   );
 }
