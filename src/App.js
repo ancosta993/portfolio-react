@@ -15,7 +15,7 @@ function App() {
       </main>
     ) : (
       <main>
-        <Header></Header>
+        <Header ></Header>
       </main>
     )}
   </>

@@ -65,6 +65,7 @@ body {
 
 .nav-tabs {
   display: flex;
+  flex-direction: row wrap;
   color: #68efe7;
   justify-content: space-between;
   align-items: center;
@@ -80,16 +81,23 @@ body {
   gap:4rem;
 }
 
+.nav-link {
+  transition: transform .5s;
+  margin:0 5px 0 5px;
+}
+
 .nav-link:hover{
-  border-bottom: solid 5px #68efe7;
-  border-radius:0.5rem;
-  padding:0 2px 0 2px;
+  transform: scale(1.2);
   cursor:pointer;
 }
 
 /* utility */
 .nav-link-active{
-  border-bottom: #68efe7;
+  border-bottom: solid 5px #68efe7;
+  border-radius:0.5rem;
+  padding:0 2px 0 2px;
+  cursor:pointer;
+
 }
 
 /* reseting the elements */
