@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {validateEmail} from '../../utils/validateEmail';
 
 function Contacts(){
    const [contacts, setContacts] = useState({name:'', email:'', message:''});
@@ -6,6 +7,20 @@ function Contacts(){
    const [errorMessage, setErrorMessage] = useState('');
 
    const handleChange = (e) => {
+      if (e.target.name === 'email') {
+         const isValid = validateEmail(e.target.value);
+         if(!isValid){
+            setErrorMessage('Email is not Valid')
+         } else {
+            setErrorMessage('')
+         }
+      } else {
+         if (!e.target.name.length) {
+            setErrorMessage(`${e.target.name} is required, please`)
+         } else {
+            setErrorMessage('');
+         }
+      }
       if (!errorMessage) {
          setContacts({...contacts, [e.target.name]: e.target.value});
       }
